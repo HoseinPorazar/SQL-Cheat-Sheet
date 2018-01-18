@@ -346,7 +346,7 @@ Drop procedure sp_Select_All_ContactDetails
 
 
 FOR XML RAW 
-```
+```sql
 select Person.Contact.Title, Person.Contact.FirstName, Person.Contact.LastNamefrom
 Person.Contact
 where Person.Contact.Title ='Mr.'
