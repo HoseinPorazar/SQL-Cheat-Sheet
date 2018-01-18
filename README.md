@@ -369,9 +369,17 @@ for xml raw ('PersonDetails'), elements
 ```
 
 
+ROW_NUMBER() function
 
+```sql
 
+SELECT	AnimalID,
+	AnimalName,
+	AnimalType,
+	ROW_NUMBER() OVER(ORDER BY AnimalName) AS RowNumber
+FROM	Animal
 
+```
 
 
 
