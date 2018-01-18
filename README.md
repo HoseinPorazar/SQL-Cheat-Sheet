@@ -379,6 +379,13 @@ SELECT	AnimalID,
 	ROW_NUMBER() OVER(ORDER BY AnimalName) AS RowNumber
 FROM	Animal
 
+<b>PARTITION BY</b>
+SELECT	AnimalID,
+	AnimalName,
+	AnimalType,
+	ROW_NUMBER() OVER(PARTITION BY AnimalType ORDER BY AnimalName) AS RowNumber
+FROM	Animal A
+ORDER	BY AnimalType, AnimalName
 ```
 
 
